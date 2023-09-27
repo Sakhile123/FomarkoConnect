@@ -1,0 +1,155 @@
+body{
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+header{
+  display: flex;
+  flex-direction: row;
+}
+ header:hover{
+    background-color: rgba(245, 245, 245, 0.562);
+ }
+ .logo img{
+    height: 100px;
+    opacity: 0.8;
+ }
+ .logo img{
+    height: 50px;
+    opacity: 1;
+    margin-left: 50px;
+    
+}
+.nav{
+padding-left: 350px;
+margin-top: 20px;
+
+}
+
+.nav nav{
+margin: 10px;
+}
+
+.nav nav a{
+text-align: center;
+text-decoration: none;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+margin-left: 30px;
+font-weight: bolder;
+
+}
+
+.nav button{
+    margin-left: 13px;
+    background-color: black;
+    color: white;
+}
+button{
+    padding-left: 200px;
+}
+.nav nav a:hover{
+color: rgba(219, 91, 219, 0.795);
+
+}
+.container-gif{
+    border: solid rgb(248, 247, 247);
+    width: 280px;
+    margin-left: 29px;
+    float: left;
+    background-color: white;
+    color: black;
+    text-align: center;
+  
+}
+.container-gif img{
+  width: 280px;
+  height: 35vh;
+  margin-top: 1px;
+    
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+.search{
+    text-align: right;
+    margin-top: 60px;
+}
+form{
+margin-left: 600px;
+margin-top: 100px;
+border: solid white;
+width: fit-content;
+display: block;
+justify-content: space-between;
+
+}
+.login input{
+width: 300px;
+background-color: rgba(128, 85, 168, 0.562);
+color: white;
+height: 7vh;
+}
+
+.about p{
+text-align: center;
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.services img{
+float: left;
+margin-left: 13px;
+}
+.colomn-a{
+width: 300px;
+height: auto;
+border:solid black;
+background-color: black;
+color: white;
+float: left;
+margin-left: 30px;
+text-align: center;
+}
+.colomn-a img{
+text-align: center;
+
+}
+.colomn-b{
+width: 350px;
+height: auto;
+border:solid black;
+background-color: black;
+color: white;
+float: left;
+margin-left: 100px;
+text-align: center;
+}
+
+
+.colomn-c{
+width: 400px;
+height: auto;
+border:solid black;
+background-color: black;
+color: white;
+float: left;
+margin-left: 100px;
+text-align: center;
+}
+.services{
+background-color: whitesmoke;
+color:black;
+padding-bottom: 30px;
+height: 98vh;
+}
+
+.about-body{
+    text-align: center;
+    border: black;
+    margin-left: 300px;
+
+}
