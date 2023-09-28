@@ -8,6 +8,7 @@ body{
 header{
   display: flex;
   flex-direction: row;
+
 }
  header:hover{
     background-color: rgba(245, 245, 245, 0.562);
@@ -17,49 +18,49 @@ header{
     opacity: 0.8;
  }
  .logo img{
-    height: 50px;
+ 
     opacity: 1;
     margin-left: 50px;
     
 }
 .nav{
-padding-left: 550px;
-margin-top: 20px;
+    padding-left: 450px;
+    margin-top: 20px;
 
-}
+    }
 
-.nav nav{
-margin: 10px;
-}
+    .nav nav{
+    margin: 10px;
+    }
 
-.nav nav a{
-text-align: center;
-text-decoration: none;
-color: white;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 15px;
-margin-left: 30px;
-font-weight: bolder;
-
-
-}
- .nav nav a:hover{
-color: rgba(219, 91, 219, 0.795);
-
-}
-.nav nav button a{
-    color:white;
+    .nav nav a{
     text-align: center;
-    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 30px;
+    font-weight: bolder;
 
-}
 
-.nav nav button{
-    margin-left: 450px;
-    background-color: black;
-    height: 8vh;
-    border-radius: 20px;
-}
+    }
+    .nav nav a:hover{
+    color: rgba(219, 91, 219, 0.795);
+
+    }
+        .nav nav button a{
+        color:white;
+        text-align: center;
+        margin-right: 20px;
+
+    }
+
+    .nav nav button{
+        margin-left: 450px;
+        background-color: rgb(20, 31, 11);
+        height: 8vh;
+        border-radius: 20px;
+    }
 .container-gif{
     border: solid rgb(248, 247, 247);
     width: 280px;
@@ -108,42 +109,6 @@ font-family: Arial, Helvetica, sans-serif;
 .services img{
 float: left;
 margin-left: 13px;
-}
-.colomn-a{
-width: 300px;
-height: auto;
-border:solid black;
-background-color: black;
-color: white;
-float: left;
-margin-left: 30px;
-text-align: center;
-}
-.colomn-a img{
-text-align: center;
-
-}
-.colomn-b{
-width: 350px;
-height: auto;
-border:solid black;
-background-color: black;
-color: white;
-float: left;
-margin-left: 100px;
-text-align: center;
-}
-
-
-.colomn-c{
-width: 400px;
-height: auto;
-border:solid black;
-background-color: black;
-color: white;
-float: left;
-margin-left: 100px;
-text-align: center;
 }
 .services{
 background-color: whitesmoke;
