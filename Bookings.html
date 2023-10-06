@@ -13,6 +13,7 @@
         }
         .form{
             text-align: center;
+            font-size: 18px;
         }
         .container-booking input{
             width: 500px;
@@ -23,6 +24,106 @@
             height: auto;
           
         }
+        header{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(0, 153, 255);
+  opacity: 0.8;
+
+}
+        .nav{
+    padding-left: 27%;
+    margin-top: 2%;
+
+    }
+
+
+    .nav nav a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 30px;
+    font-weight: bolder;
+
+
+    }
+    .nav nav a:hover{
+    color: rgba(219, 91, 219, 0.795);
+
+    }
+        .nav nav button a{
+        color:white;
+        text-align: center;
+        margin-right: 20px;
+
+    }
+
+    .nav nav button{
+        margin-left: 450px;
+        background-color: rgb(20, 31, 11);
+        height: 8vh;
+        border-radius: 20px;
+    }
+   
+    h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+            width: 400px;
+            margin-top: 12px;
+            margin-left: 12;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #response {
+            margin-top: 20px;
+            margin-left: 20px;
+            padding: 10px;
+            background-color: #ECEFF1;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            height: 13vh;
+            width: 300px;
+            color: black;
+        }
+
+    </style>
     </style>
 </head>
 <body>
@@ -38,64 +139,60 @@
                 <a href="home.html">Home</a>
                 <a href="#doc">Book a Doctor</a>
                 <a href="#clinic">Clinic</a>
+                <a href="#Blog">Blog</a>
     
             </nav>
         </div>
     </header>
-    <div class="form">
-        <div class="container-booking">
+   
+    </div>
+    </div>
+    <h1>Tell us about yourself</h1>
+    <form id="questionForm">
+       
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <br>
 
-        <label for="">Are looking for</label><br>
-        <div class="checkbox">
-        <label for="">Clinic</label>
-        <input type="checkbox" placeholder="clinic">
+  
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required>
         <br>
-        <tr>
-        <label for="">Hospital</label>
-    </tr>
-    <tr>
-        <input type="checkbox" placeholder="Hospital">
-    </tr>
-</div>
-    <tr>
+        <label for="Phonenumber">Phone Number</label>
+        <input type="number" id="number" name="Phonenumber" required>
         <br>
-        <label for="">name</label>
-    </tr>
-    <br>
-    <td>
-        <input type="text" required>
-    </tr>
-    <br>
-    <tr>
-        <label for="">Surname</label>
-    </tr>
-    <br>
-    <tr>
-        <input type="text" required>
-    </tr>
-    <br>
-    <tr>
+
+   
+        <label for="book">Would you like to book?</label>
+        <select id="book" name="book" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br>
+
+        <button type="button" onclick="askQuestions()">Submit</button>
+    </form>
+    <div id="response"></div>
+
+    <script>
+        function askQuestions() {
+          
+            const name = document.getElementById("name").value;
+            const Phonenumber = document.getElementById("Phonenumber").value;
+            const age = document.getElementById("age").value;
+            const book = document.getElementById("book").value;
+
         
-        <label for="">Id Number</label>
-    </tr>
-    <br>
-    <tr>
-        <input type="number" required>
-    </tr>
-    <br>
-    <tr>
-        <label for="">Phone Number</label>
-    </tr>
-    <br>
-    <tr>
-        <input type="text" required>
-    </tr>
-    <br>
-    <input type="submit" placeholder="Submit" style="width: fit-content;">
-    <input type="reset" placeholder="Reset" style="width: fit-content;">
-        
-    </div>
-    </div>
-    
+            const response = document.getElementById("response");
+            response.innerHTML = `
+                Your name: ${name}<br>
+                Your Phonenumber: ${Phonenumber}<br>
+                Your age: ${age}<br>
+                Would you like to book? ${book}
+            `;
+
+           
+        }
+    </script>
 </body>
 </html>

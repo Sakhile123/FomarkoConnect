@@ -3,66 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FornakoConnect</title>
+    <title>FormakoConnect</title>
     <link rel="stylesheet" href="f.css">
     <style>
-        header:hover{
-            background-color: rgb(39, 37, 37);
-        }
-     
-       .nav{
-        padding-left: 450px;
-        margin-top: 20px;
+        body{
+          background-color: white;
+          color: black;
+                }
+
+        header{
+            background-color: rgb(0, 153, 255);
+        display: flex;
+        flex-direction: row;
+        opacity: 0.8;
+        color: black;
 
         }
-
-        .nav nav{
-        margin: 10px;
+        .logo img{
+            opacity: 1;
+            margin-left: 50px;
+          
         }
+    
+        .nav{
+    padding-left: 16%;
+    margin-top: 2%;
 
-        .nav nav a{
+    }
+  
+
+    .nav nav a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 30px;
+    font-weight: bolder;
+
+
+    }
+    .nav nav a:hover{
+    color: rgba(219, 91, 219, 0.795);
+
+    }
+        .nav nav button a{
+        color:white;
         text-align: center;
-        text-decoration: none;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
-        margin-left: 30px;
-        font-weight: bolder;
+        margin-right: 20px;
 
+    }
 
-        }
-        .nav nav a:hover{
-        color: rgba(219, 91, 219, 0.795);
-
-        }
-                .nav nav button a{
-            color:white;
-            text-align: center;
-            margin-right: 20px;
-
-        }
-
-        .nav nav button{
-            margin-left: 450px;
-            background-color: rgb(20, 31, 11);
-            height: 8vh;
-            border-radius: 20px;
-        }
+    .nav nav button{
+        margin-left: 450px;
+        background-color: rgb(20, 31, 11);
+        height: 8vh;
+        border-radius: 20px;
+    }
+   
+      .login{
+        border: rgba(219, 91, 219, 0.795); 
+        background-color: whitesmoke;
+      display: block;
+      text-align: center;
+      }
         </style>
 </head>
 <body>
+
     <header>
         <div class="logo">
-        
-                <img src="farmako logo.jpg">
-          
-        </div>
+     <img src="logo e nice.png">
+    </div>
+   
+<div class="nav">
        
         <div class="nav">
             <nav>
                 <a href="home.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
+                <a href="#Blog">Blog</a>
                 <button><a href="Bookings.html">Request a Booking</a></button> 
     
             </nav>
@@ -80,7 +101,7 @@
         </p>
         </div>
         <div class="login">
-            <form >
+            <form id="login">
                 <table>
                     <th>
                 <label style="font-family: Arial, Helvetica, sans-serif; font-size: 30px;" >Login</label>
@@ -96,14 +117,34 @@
             </tr>
             </table>
             <br>
-            <input type="submit"  placeholder="submit"  style=" width: 120px; margin-left: 30px;">
+            <button type="button" onclick="login()">Submit</button>
           
-            <input type="reset" placeholder="Reset"  style=" width: 120px;">
+            <button type="button" onclick="login()">Clear</button>
             </form>
         </div>
 </section>
+<section href="#Blog" id="Blog">
+    <form id="questionForm">
+    <label for="question">Lets Chat</label>
+    <p id="questionText">What is your name?</p>
+    <input type="text" id="answer" name="answer" required>
+    <button type="button" onclick="askQuestion()">Submit</button>
+</form>
+<div id="response"></div>
 
-   <footer>
+<script>
+    function askQuestion() {
+    
+        const answer = document.getElementById("answer").value;
+
+        const response = document.getElementById("response");
+        response.innerHTML = "Hello " + answer;
+
+    }
+</script>
+
+</section>
+<footer>
    </footer> 
 </body>
 </html>
